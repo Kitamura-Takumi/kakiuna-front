@@ -4,3 +4,10 @@
   border: solid 1px #454545;
   margin-top: 300px;
   }
+
+  header p {
+    width: 100%;
+    background-color: beige;
+    position: fixed;
+  }
+
