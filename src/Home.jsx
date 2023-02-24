@@ -9,12 +9,12 @@ const Home = () => {
     <header>
         <p>login</p>
     </header>
-      <div className="box">
+      
         <Routes>
-          <Route exact path="/" element={<SapporoElement />} />
-          <Route exact path="/sapporo" element={<SapporoElement />} />
+          <Route exact path="/sapporo" element={<Sapporo />} />
+          <Route exact path="/" element={<HomeElement />} />
         </Routes>
-      </div>
+      
 
       {/* <div className="box">
         <Routes>
@@ -31,15 +31,17 @@ const Home = () => {
   );
 };
 
-function SapporoElement() {
+function HomeElement() {
   return (
     <>
+    <div className="box">
       <h1>
         <Link to="/sapporo">
           <span>札幌ドーム</span>
         </Link>
       </h1>
       <p>☆☆☆☆☆</p>
+      </div>
     </>
   );
 }
