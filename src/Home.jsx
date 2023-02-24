@@ -6,12 +6,11 @@ import { Route, Routes, Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
-    <header>
-        <p>login</p>
-    </header>
+    
       <div className="box">
         <Routes>
-          <Route exact path="/" element={<SapporoElement />} />
+          <Route exact path="/login" element={<loginElement/>} /> 
+
           <Route exact path="/sapporo" element={<SapporoElement />} />
         </Routes>
       </div>
@@ -36,7 +35,7 @@ function SapporoElement() {
     <>
       <h1>
         <Link to="/sapporo">
-          <span>札幌ドーム</span>
+          <p>札幌ドーム</p>
         </Link>
       </h1>
       <p>☆☆☆☆☆</p>
@@ -71,5 +70,17 @@ function SapporoElement() {
 //     </>
 //   );
 // }
+
+function loginElement() {
+  return (
+    <>
+    <header>
+        <Link to="/login">
+          <p>login</p>
+          </Link>
+    </header>
+    </>
+  )
+};
 
 export default Home;
