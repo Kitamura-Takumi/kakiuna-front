@@ -1,10 +1,6 @@
 import "./sapporo.css"
 
 const Sapporo = () => {
-<<<<<<< HEAD
-   
-}
-=======
    return (
       <>
    <div class="flex-container">
@@ -62,6 +58,5 @@ const Sapporo = () => {
 </>
    )
 };
->>>>>>> ce8c263e5862f30fa507088cf46c3aea96ba4e30
 
 export default Sapporo;
