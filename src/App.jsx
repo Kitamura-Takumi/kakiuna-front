@@ -4,7 +4,7 @@ const App = () => {
   <div className="box">
   <a  className="href" href="#">
   <h1><span>東京ドーム</span></h1>
-  <p>☆☆☆☆☆</p>
+  <p>☆☆☆☆0</p>
   </a>
 </div>
 
