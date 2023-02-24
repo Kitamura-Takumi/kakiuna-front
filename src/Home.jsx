@@ -3,19 +3,26 @@ import "./App.css";
 import Sapporo from "./sapporo";
 import { Route, Routes, Link } from "react-router-dom";
 
+const stadiumValue = {
+  "name":
+  "element":
+},
+{
+
+}
+
 const Home = () => {
   return (
     <div className = "html">
         <Routes>
           <Route exact path="/login" element={<loginElement/>} /> 
-          <Route exact path="/sapporo" element={<Sapporo />} />
-          <Route exact path="/kyoto" element={<kyoto />} />
-          <Route exact path="/okinawa" element={<okinawa />} />
           <Route exact path="/" element={<HomeElement />} />
         </Routes>
-      
 
-      
+          for (let i; i < stadiumValue.lenght; i++){
+              <Route exact path={stadiumValue.name} element={<stadiumValue.HomeElement/>} />
+          }
+        
     </div>
   );
 };
@@ -36,25 +43,7 @@ function HomeElement() {
         </Link>
       </h1>
       <p>☆☆☆☆☆</p>
-      </div>
-
-      <div className="box">
-      <h1>
-        <Link to="/kyoto">
-          <p>京都ドーム</p>
-        </Link>
-      </h1>
-      <p>☆☆☆☆☆</p>
-      </div>
-
-      <div className="box">
-      <h1>
-        <Link to="/oosaka">
-          <p>大阪ドーム</p>
-        </Link>
-      </h1>
-      <p>☆☆☆☆☆</p>
-      </div>
+      </div> 
     </div>
   );
 }
