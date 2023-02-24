@@ -3,29 +3,22 @@ import "./App.css";
 import Sapporo from "./sapporo";
 import { Route, Routes, Link } from "react-router-dom";
 
-const stadiumValue = {
-  "name":
-  "element":
-},
-{
-
-}
-
+const stadiumValue = [
+  Sapporo,
+  // oosaka,
+  // kyouto,
+]
 const Home = () => {
   return (
     <div className = "html">
         <Routes>
           <Route exact path="/login" element={<loginElement/>} /> 
           <Route exact path="/" element={<HomeElement />} />
-        </Routes>
-
-          for (let i; i < stadiumValue.lenght; i++){
-              <Route exact path={stadiumValue.name} element={<stadiumValue.HomeElement/>} />
-          }
-        
+          <Route exact path= "/sapporo" element={<Sapporo />} />
+        </Routes> 
     </div>
   );
-};
+}
 
 function HomeElement() {
   return (
