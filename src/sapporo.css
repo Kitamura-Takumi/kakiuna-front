@@ -1,0 +1,64 @@
+html{
+    font-size: 62.5%;
+}
+
+ body{
+    height: 100%;
+ }
+
+ .flex-container {
+  background-color: aquamarine;
+   flex-direction: row;
+   display: flex;
+   border: tomato 1px solid;
+   border-radius: 30px 30px 30px 30px;
+ }
+
+ .flex-container img{
+  width: 100%;
+  height: fit-content;
+  border-radius: 0 30px 30px 0;
+ }
+
+ .Visual{
+  flex: 1 0 50%;
+  font-size: 2em;
+ }
+
+ .warp_text{
+  border: rgb(187, 235, 90) 4px solid;
+  width: 300px;
+  height: 200px;
+  background-color: rgba(76, 220, 112, 0.933);
+  margin: 10px 0 0 10px;
+  font-size: 3em;
+  flex-direction: row;
+ }
+
+ .warp_heading {
+  font-size: 1.5em;
+  text-align: center;
+ }
+ .warp{
+  border: rgb(175, 209, 212) 1px solid;
+  width: 300px;
+  height: 130px;
+  background-color: #ffee;
+ }
+ .textbox:focus {
+  text-align: center;
+  outline: 0;
+  border: 2px solid #2196f3;
+}
+
+.flex01{
+  display: flex;
+  flex-direction: row;
+  margin: 30px ;
+  justify-content: center;
+}
+ .flex02{
+  display: flex;
+  margin: 30px 30px 0 0;
+  justify-content: center;
+ }
