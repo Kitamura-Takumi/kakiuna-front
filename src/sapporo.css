@@ -12,38 +12,51 @@ html{
    display: flex;
    border: tomato 1px solid;
    border-radius: 30px 30px 30px 30px;
+   overflow: hidden;
+   flex-wrap: wrap;
+   justify-content: center;
+
  }
 
  .flex-container img{
   width: 100%;
+  max-width: 50%;
+  min-width: 300px;
   height: fit-content;
-  border-radius: 0 30px 30px 0;
+  /* border-radius: 0 30px 30px 0; */
  }
 
  .Visual{
   flex: 1 0 50%;
-  font-size: 2em;
+  font-size: 1.2em;
  }
 
  .warp_text{
+  flex-basis: 30%;
+  flex-grow: 1;
+  flex-shrink: 0;
   border: rgb(187, 235, 90) 4px solid;
-  width: 300px;
-  height: 200px;
+  min-width: 200px;
+  min-height: 200px;
   background-color: rgba(76, 220, 112, 0.933);
-  margin: 10px 0 0 10px;
+  margin: 10px 5px 0 5px;
   font-size: 3em;
   flex-direction: row;
+  flex-wrap: wrap;
  }
 
  .warp_heading {
   font-size: 1.5em;
   text-align: center;
+  min-height: 20px;
+  flex-wrap: wrap;
  }
  .warp{
   border: rgb(175, 209, 212) 1px solid;
-  width: 300px;
+  width: 100%;
   height: 130px;
   background-color: #ffee;
+  
  }
  .textbox:focus {
   text-align: center;
@@ -56,9 +69,11 @@ html{
   flex-direction: row;
   margin: 30px ;
   justify-content: center;
+  flex-wrap: wrap;
 }
  .flex02{
   display: flex;
   margin: 30px 30px 0 0;
   justify-content: center;
+  flex-wrap: wrap;
  }

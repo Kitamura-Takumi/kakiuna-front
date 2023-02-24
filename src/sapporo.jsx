@@ -6,7 +6,7 @@ const Sapporo = () => {
    <div class="flex-container">
    <div class="Visual">
        <h1>札幌ドーム</h1>
-       <h1>所在地：札幌市</h1>
+       <h1>所在地:〒062-0045 北海道札幌市豊平区羊ケ丘１</h1>
            <h1>ホームチーム：コンサーレ札幌</h1>
    </div>
    <img src="/sapporo.jpg" alt="スタジアム" />
