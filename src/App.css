@@ -5,9 +5,9 @@
   margin-top: 300px;
   }
 
-  header p {
+  .header link {
     width: 100%;
-    background-color: beige;
+    background-color: rgb(220, 220, 34);
     position: fixed;
   }
 
