@@ -3,18 +3,15 @@ import "./App.css";
 import Sapporo from "./sapporo";
 import { Route, Routes, Link } from "react-router-dom";
 
-const stadiumValue = [
-  Sapporo,
-  // oosaka,
-  // kyouto,
-]
+const stadiumValue = Sapporo;
+
 const Home = () => {
   return (
     <div className = "html">
         <Routes>
           <Route exact path="/login" element={<loginElement/>} /> 
           <Route exact path="/" element={<HomeElement />} />
-          <Route exact path= "/sapporo" element={<Sapporo />} />
+          <Route exact path= "/Sapporo" element={<Sapporo />} />
         </Routes> 
     </div>
   );
@@ -31,7 +28,7 @@ function HomeElement() {
 
     <div className="box">
       <h1>
-        <Link to="/sapporo">
+        <Link to="/Sapporo">
           <p>札幌ドーム</p>
         </Link>
       </h1>
