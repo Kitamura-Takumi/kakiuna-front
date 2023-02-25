@@ -1,4 +1,6 @@
 import "./sapporo.css"
+import CmpReview from "./components/CmpReview";
+import { useState } from "react";
 
 
 const Sapporo = () => { 
@@ -7,6 +9,7 @@ const Sapporo = () => {
     const team = "コンサドーレ札幌";
     const img = "/sapporo.jpg";
     
+
 
    return (
       <>
@@ -61,15 +64,9 @@ const Sapporo = () => {
            <input type="text" class="textbox"/>
        </div>
    </div>
-   <div class="warp_text02">
-       <div class="messeage">
-           感想
-       </div>
-       <div class="warp">
-           <input type="text" class="textbox"/>
-       </div>
-   </div>
 </div>
+
+<CmpReview />
 </>
    )
 };

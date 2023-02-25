@@ -1,6 +1,6 @@
+import React from "react";
 import { useState } from "react";
-const Review = () => {
-
+export default function CmpReview() {
     const [text, setText] = useState("");
     const [all,setAll] = useState("");
     const [convenient,setConvenient] = useState("");
@@ -30,9 +30,9 @@ const Review = () => {
         setAbleSee("");
         setGourmet("");
         setExcited("");
-
-        
     }
+
+    const [cmp, setCmp] = useState();
 
     return (
         <>
@@ -93,13 +93,7 @@ const Review = () => {
        </div>
    </div>
 </div>
-<button onClick={onClickAddScreen}>決定</button>
-
-{/* {
-    reviewlist.map
-} */}
-        </>
+<button onClick={onClickAddScreen} onChange>決定</button>
+</>
     )
-    }
-
-export default Review;
+}
