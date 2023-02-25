@@ -6,15 +6,21 @@
 .box {
   
   font-size: 15px;
-  display: inline-block;
-  border: solid 1px #454545;
+  background-color: aqua;
+  width: 300px;
+  height: 200px;
+  border: solid 3px #665de6;
   margin: 300px 10px 10px 10px;
   padding: 5px;
+  flex-direction: row;
   }
 
   .header link {
     width: 100%;
-    background-color: rgb(220, 220, 34);
+    background-color: rgb(138, 223, 249);
     position: fixed;
   }
+
+  
+  
 

@@ -45,7 +45,7 @@ const Review = () => {
            総合
        </div>
        <div class="warp">
-        <input type="text" value={all} onChange={(event) => setAll(event.target.value)}/>
+           <input type="text" class="textbox"/>
        </div>
    </div>
    <div class="warp_text">
