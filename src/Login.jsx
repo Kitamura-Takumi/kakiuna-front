@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Home from "./Home";
+import { Route, Routes, Link } from "react-router-dom";
 const Login = () => {
   const [name, setname] = useState("");
   const [password, setpassword] = useState("");
@@ -18,23 +20,29 @@ const Login = () => {
     setbuton("");
   };
 
+  
   return (
     <>
+    <Routes>
+        < Route exact path="/Home" element={<Home />} />
+    </Routes>
+
       <div>
         <p>ユーザーネーム</p>
         <input
           type="text"
           value={name} onChange={(event) => setname(event.target.value)}/>
       </div>
-      <digit push
-      v>
+      <div>
         <p>パスワード</p>
         <input
           type="password"
-          value={password} onChange={(event) => setpassword(event.target.value)}
-        />
-      </digit>
-      <button type="submit">送信</button>
+          value={password} onChange={(event) => setpassword(event.target.value)}/>
+      </div>
+
+      <Link to="/">
+      <button>送信</button>
+      </Link>
     </>
   );
 };
