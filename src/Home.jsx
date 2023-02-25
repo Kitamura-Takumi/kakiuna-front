@@ -15,6 +15,7 @@ const Home = () => {
     <div className="html">
       <Routes>
         <Route exact path="/login" element={<Review />} />
+        <Route exact path="/review" element={<Review />} />
         <Route exact path="/" element={<HomeElement />} />
         {/* <Route exact path="/sapporo" element={<Value.Component />} /> */}
         {stadiumValue.map((Stadiums) => (
@@ -29,6 +30,9 @@ function HomeElement() {
   return (
     <div>
       <header>
+        <Link to="/review">
+          <p>Reviw</p>
+        </Link>
         <Link to="/login">
           <p>login</p>
         </Link>
