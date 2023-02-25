@@ -50,9 +50,11 @@ function HomeElement() {
           <p>ログアウト</p>
         </Link>
 
+
       </header>
 
-      <div className="box">
+      <div className="flex">
+      <div className="box1">
         <h1>
           <Link to="/sapporo">
             <p>札幌ドーム</p>
@@ -60,6 +62,28 @@ function HomeElement() {
         </h1>
         <p>☆</p>
       </div>
+
+    <div className="box2">
+        <h1>
+          <Link to="/kashima">
+            <p>鹿島ドーム</p>
+          </Link>
+        </h1>
+      </div>
+
+      <div className="box3">
+        <h1>
+          <Link to="/sapporo">
+            <p>札幌ドーム</p>
+          </Link>
+        </h1>
+      </div>
+
+      </div>
+
+      
+
+      
     </div>
   );
 }
