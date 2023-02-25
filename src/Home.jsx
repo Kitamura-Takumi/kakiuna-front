@@ -2,7 +2,9 @@ import { useState } from "react";
 import "./App.css";
 import Sapporo from "./Sapporo";
 import Review from "./Review";
+import Login from "./Login";
 import Register from "./Register";
+
 
 import { Route, Routes, Link } from "react-router-dom";
 
@@ -15,7 +17,7 @@ const Home = () => {
   return (
     <div className="html">
       <Routes>
-        <Route exact path="/login" element={<Review />} />
+        <Route exact path="/login" element={<Login/>} />
         <Route exact path="/review" element={<Review />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/" element={<HomeElement />} />
