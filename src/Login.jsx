@@ -1,47 +1,40 @@
 import { useState } from "react";
 const Login = () => {
+  const [name, setname] = useState("");
+  const [password, setpassword] = useState("");
+  const [button, setbuton] = useState("");
 
-    const [text, setText] = useState("");
-    const [all,setAll] = useState("");
-    const [convenient,setConvenient] = useState("");
-    const [ableSee, setAbleSee] = useState("");
-    const [gourmet, setGourmet] = useState("");
-    const [excited, setExcited] = useState("");
+  const [addname, setAddname] = useState("");
+  const [addpassword, setAddpassword] = useState("");
+  const [addButton, setAddButton] = useState("");
 
+  const onClickGetValue = () => {
+    setAddname(name);
+    setAddpassword(password);
+    setAddButton(button);
 
-    const [addtext, setAddText] = useState("");
-    const [addAll, setAddAll] = useState("");
-    const [addConvenient,setAddConvenient] = useState("");
-    const [addAbleSee, setAddAbleSee] = useState("");
-    const [addGourmet, setAddGourmet] = useState("");
-    const [addExcited, setAddExcited] = useState("");
+    setname("");
+    setpassword("");
+    setbuton("");
+  };
 
-    const onClickGetValue = () => {
-        setAddText(text);
-        setAddAll(all);
-        setAddConvenient(convenient);
-        setAddAbleSee(ableSee);
-        setAddGourmet(gourmet);
-        setAddExcited(excited);
-
-        setText("");
-        setAll("");
-        setConvenient("");
-        setAbleSee("");
-        setGourmet("");
-        setExcited("");
-    }
-
-    return (
-        <>
-    <div>
-        <p>UsernName</p>
-        <input type="text" value={text} onChange={(event) => setText(event.target.value)}/>
-    </div>
-    <div>
-        <p>Passward</p>
-        <input type="text" value={text} onChange={(event) => setText(event.target.value)}/>
-    </div>
-       </>
-    )}
-    export default Login;
+  return (
+    <>
+      <div>
+        <p>ユーザーネーム</p>
+        <input
+          type="text"
+          value={name} onChange={(event) => setname(event.target.value)}/>
+      </div>
+      <div>
+        <p>パスワード</p>
+        <input
+          type="password"
+          value={password} onChange={(event) => setpassword(event.target.value)}
+        />
+      </div>
+      <button type="submit">送信</button>
+    </>
+  );
+};
+export default Login;
