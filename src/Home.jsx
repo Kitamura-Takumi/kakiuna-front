@@ -73,8 +73,8 @@ function HomeElement() {
 
       <div className="box3">
         <h1>
-          <Link to="/sapporo">
-            <p>札幌ドーム</p>
+          <Link to="/panasonic">
+            <p>パナソニックドーム</p>
           </Link>
         </h1>
       </div>

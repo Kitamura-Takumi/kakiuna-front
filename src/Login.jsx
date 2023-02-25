@@ -12,7 +12,7 @@ const Login = () => {
   const [addpassword, setAddpassword] = useState("");
   const [addButton, setAddButton] = useState("");
 
-  const onClickGetValue = () => {
+  const onClickLoginButton = () => {
     setAddname(name);
     setAddpassword(password);
     setAddButton(button);
@@ -20,14 +20,16 @@ const Login = () => {
     setname("");
     setpassword("");
     setbuton("");
+    <Routes>
+        < Route exact path="/home" element={<Home />} />
+    </Routes>
   };
 
   
   return (
     <>
-    <Routes>
-        < Route exact path="/nowlogin" element={<Home />} />
-    </Routes>
+    
+    
 
       <div>
         <p>ユーザーネーム</p>
