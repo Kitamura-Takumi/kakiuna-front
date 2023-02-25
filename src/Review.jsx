@@ -1,16 +1,42 @@
 import { useState } from "react";
 const Review = () => {
 
-    const [text, setText] = useState();
+    const [text, setText] = useState("");
+    const [all,setAll] = useState("");
+    const [convenient,setConvenient] = useState("");
+    const [ableSee, setAbleSee] = useState("");
+    const [gourmet, setGourmet] = useState("");
+    const [excited, setExcited] = useState("");
 
-    const getValue = () => {
-        
+
+    const [addtext, setAddText] = useState("");
+    const [addAll, setAddAll] = useState("");
+    const [addConvenient,setAddConvenient] = useState("");
+    const [addAbleSee, setAddAbleSee] = useState("");
+    const [addGourmet, setAddGourmet] = useState("");
+    const [addExcited, setAddExcited] = useState("");
+
+    const onClickGetValue = () => {
+        setAddText(text);
+        setAddAll(all);
+        setAddConvenient(convenient);
+        setAddAbleSee(ableSee);
+        setAddGourmet(gourmet);
+        setAddExcited(excited);
+
+        setText("");
+        setAll("");
+        setConvenient("");
+        setAbleSee("");
+        setGourmet("");
+        setExcited("");
     }
+
     return (
         <>
     <div>
-        <input value={text} onChange={(event) => setText(event.target.value)}/>
-        <button onClick={getValue}>決定</button>
+        <p>スタジアム名</p>
+        <input type="text" value={text} onChange={(event) => setText(event.target.value)}/>
     </div>
 
         <div class="flex01">
@@ -27,7 +53,7 @@ const Review = () => {
            立地・利便性
        </div>
        <div class="warp">
-           <input type="text" className="textbox"/>
+       <input type="text" value={convenient} onChange={(event) => setConvenient(event.target.value)}/>
        </div>
    </div>
    <div class="warp_text">
@@ -35,7 +61,7 @@ const Review = () => {
            見やすさ
        </div>
        <div class="warp">
-           <input type="text" class="textbox"/>
+       <input type="text" value={ableSee} onChange={(event) => setAbleSee(event.target.value)}/>
        </div>
    </div>
 </div>
@@ -45,7 +71,7 @@ const Review = () => {
            グルメ
        </div>
        <div class="warp">
-           <input type="text" class="textbox"/>
+       <input type="text" value={gourmet} onChange={(event) => setGourmet(event.target.value)}/>
        </div>
    </div>
    <div class="warp_text">
@@ -53,19 +79,11 @@ const Review = () => {
            熱狂度
        </div>
        <div class="warp">
-           <input type="text" class="textbox"/>
+       <input type="text" value={excited} onChange={(event) => setExcited(event.target.value)}/>
        </div>
    </div>
-   <div class="warp_text02">
-        <div class="messeage">
-                感想
-        </div>
-        <div class="warp">
-                <input type="text" class="textbox"/>
-        </div>
-    </div>
 </div>
-        
+<button onClick={onClickGetValue}>決定</button>
         </>
     )
     }
