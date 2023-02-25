@@ -1,15 +1,21 @@
 import "./sapporo.css"
 
-const Sapporo = () => {
+const Sapporo = () => { 
+    const name = "札幌ドーム";
+    const adress = "〒062-0045 北海道札幌市豊平区羊ケ丘１"
+    const team = "コンサドーレ札幌";
+    const img = "/sapporo.jpg";
+    
+
    return (
       <>
    <div class="flex-container">
    <div class="Visual">
-       <h1>札幌ドーム</h1>
-       <h1>所在地:〒062-0045 北海道札幌市豊平区羊ケ丘１</h1>
-           <h1>ホームチーム：コンサーレ札幌</h1>
+       <h1>{name}</h1>
+       <h1>所在地:{adress}</h1>
+           <h1>ホームチーム：{team}</h1>
    </div>
-   <img src="/sapporo.jpg" alt="スタジアム" />
+   <img src={img} alt="スタジアム" />
 </div>
 <div class="flex01">
    <div class="warp_text">
