@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Home from "./Home";
 import { Route, Routes, Link } from "react-router-dom";
+// import axios from "axios";
 
 const Register = () => {
     const [username, setUserName] = useState();
@@ -24,27 +25,27 @@ const Register = () => {
         < Route exact path="/nowlogin" element={<Home />} />
         </Routes>
 
-        <div class="content">
+        <div className="content">
         <h1>入会申し込み</h1>
         <p>入会するには次のフォームに必要事項をご記入ください</p>
-        <div class="control">
-            <label >ユーザーネーム <spam class="required">必須</spam></label>
-            <input type="email" value={username} onChange={(event) => setUserName(event.target.value)}/>
+        <div className="control">
+            <label >ユーザーネーム <spam className="required">必須</spam></label>
+            <input id="username" type="text" value={username} onChange={(event) => setUserName(event.target.value)}/>
         </div>
-        <div class="control">
-            <label for="mymail">メールアドレス <spam class="required">必須</spam></label>
-            <input type="email" value={mail} onChange={(event) => setMail(event.target.value)}/>
+        <div className="control">
+            <label for="mymail">メールアドレス <spam className="required">必須</spam></label>
+            <input id="mail" type="email" value={mail} onChange={(event) => setMail(event.target.value)}/>
         </div>
-        <div class="control">
-            <label for="password">パスワード <spam class="required">必須</spam></label>
-            <input type="password" value={passward} onChange={(event) => setPassward(event.target.value)}/>
+        <div className="control">
+            <label for="password">パスワード <spam className="required">必須</spam></label>
+            <input id="password" type="password" value={passward} onChange={(event) => setPassward(event.target.value)}/>
         </div>
-        <div class="control">
-            <label for="password2">パスワード(確認) <spam class="required">必須</spam></label>
-            <input type="password" value={passward2} onChange={(event) => setPassward2(event.target.value)}/>
+        <div className="control">
+            <label for="password2">パスワード(確認) <spam className="required">必須</spam></label>
+            <input id="password2" type="password" value={passward2} onChange={(event) => setPassward2(event.target.value)}/>
         </div>
-        <Link to="/nowlogin">
-            <button onClick={onClickSubmit} type="submit">登録する</button>
+        <Link to="/">
+            <button onClick={onClickRegisterSubmit} type="submit">登録する</button>
         </Link>
     </div>
      </>
@@ -52,3 +53,12 @@ const Register = () => {
 }
 
 export default Register;
+
+// export const onClickRegisterSubmit = async (username, mymail, passward, passward2) => {
+//     await axios.post("", {
+//         username,
+//         mymail,
+//         passward,
+//         passward2,
+//     });
+// };

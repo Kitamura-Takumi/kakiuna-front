@@ -4,13 +4,14 @@ import Sapporo from "./Sapporo";
 import Review from "./Review";
 import Login from "./Login";
 import Register from "./Register";
-
 import { Route, Routes, Link } from "react-router-dom";
 
 const stadiumValue = [
   { path: "/sapporo", Component: Sapporo },
   //{ path: "/aomori", Component: Aomori },
 ];
+
+//const score = ;
 
 const Home = () => {
   return (
@@ -58,7 +59,7 @@ function HomeElement() {
             <p>札幌ドーム</p>
           </Link>
         </h1>
-        <p>☆☆☆☆☆</p>
+        <p>{score}</p>
       </div>
     </div>
   );
