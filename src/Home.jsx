@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./App.css";
 import Sapporo from "./sapporo";
 import Review from "./Review";
+import Login from "./Login";
+
 
 import { Route, Routes, Link } from "react-router-dom";
 
@@ -14,7 +16,7 @@ const Home = () => {
   return (
     <div className="html">
       <Routes>
-        <Route exact path="/login" element={<Review />} />
+        <Route exact path="/login" element={<Login/>} />
         <Route exact path="/review" element={<Review />} />
         <Route exact path="/" element={<HomeElement />} />
         {/* <Route exact path="/sapporo" element={<Value.Component />} /> */}
