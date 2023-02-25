@@ -1,0 +1,21 @@
+.login01{
+    border: solid 3px black;
+    font-size: 20px;
+    text-align: center;
+}
+
+.text01{  
+    position: relative;
+    padding: 0.1em 0.5em;
+    background: -webkit-linear-gradient(to right, rgb(255, 186, 115), transparent);
+    background: linear-gradient(to right, rgb(255, 186, 115), transparent);
+    color: #545454;
+  }
+.text01 p{
+    font-style: oblique;
+}
+  
+  .botton01 button{
+    font-variant: small-caps;
+    background-color: rgb(250, 175, 46);
+  }

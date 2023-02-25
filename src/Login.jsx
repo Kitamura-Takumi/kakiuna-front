@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Login.css"
 import Home from "./Home";
 import { Route, Routes, Link } from "react-router-dom";
 // import axios from "axios";
@@ -26,27 +27,31 @@ const Login = () => {
   return (
     <>
     <Routes>
-        < Route exact path="/nowlogin" element={<Home />} />
+        <Route exact path="/home" element={<Home />} />
     </Routes>
-
-      <div>
-        <p>ユーザーネーム</p>
-        <input
-          id="username"
-          type="text"
-          value={name} onChange={(event) => setname(event.target.value)}/>
+      <div className="login01">
+        <div>
+          <div className="text01">
+           <p>ユーザーネーム</p>
+          </div>
+          <input
+            type="text"
+            value={name} onChange={(event) => setname(event.target.value)}/>
+        </div>
+        <div>
+         <div className="text01">
+           <p>パスワード</p>
+          </div>
+          <input
+            type="password"
+            value={password} onChange={(event) => setpassword(event.target.value)}/>
+        </div>
+        <div className="botton01">
+          <Link to="/">
+           <button>送信</button>
+          </Link>
+        </div>
       </div>
-      <div>
-        <p>パスワード</p>
-        <input
-          id="password"
-          type="password"
-          value={password} onChange={(event) => setpassword(event.target.value)}/>
-      </div>
-
-      <Link to="/">
-      <button onClick={onClickLoginButton}>送信</button>
-      </Link>
     </>
   );
 };
