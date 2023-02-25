@@ -28,14 +28,13 @@ const onClickAddScreen = () => {
 //       ...
 //     );
 //   }
+// }
 }
-
-const Sapporo = () => { 
-    // const name = "札幌ドーム";
-    // const adress = "〒062-0045 北海道札幌市豊平区羊ケ丘１"
-    // const team = "コンサドーレ札幌";
-    // const img = "/sapporo.jpg";
-   
+const Sapporo = () => {
+    const name = "札幌ドーム";
+    const adress = "〒062-0045 北海道札幌市豊平区羊ケ丘１"
+    const team = "コンサドーレ札幌";
+    const img = "/sapporo.jpg";   
 
    return (
       <>
