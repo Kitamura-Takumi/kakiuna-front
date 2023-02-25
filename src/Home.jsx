@@ -1,20 +1,25 @@
 import { useState } from "react";
 import "./App.css";
 import Sapporo from "./sapporo";
+import Review from "./Review";
+
 import { Route, Routes, Link } from "react-router-dom";
 
 const stadiumValue = [
-  Sapporo,
-  // oosaka,
-  // kyouto,
-]
+  Sapporo
+];
+
+const Value = stadiumValue[0]
+  
+
+
 const Home = () => {
   return (
     <div className = "html">
         <Routes>
-          <Route exact path="/login" element={<loginElement/>} /> 
+          <Route exact path="/login" element={<Review/>} /> 
           <Route exact path="/" element={<HomeElement />} />
-          <Route exact path= "/sapporo" element={<Sapporo />} />
+          <Route exact path= "/sapporo" element={<Value/>} />
         </Routes> 
     </div>
   );
