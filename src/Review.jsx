@@ -82,6 +82,14 @@ const Review = () => {
        <input type="text" value={excited} onChange={(event) => setExcited(event.target.value)}/>
        </div>
    </div>
+   <div class="warp_text02">
+       <div class="messeage">
+           感想
+       </div>
+       <div class="warp">
+        <input type="text" value={excited} onChange={(event) => setExcited(event.target.value)}/>
+       </div>
+   </div>
 </div>
 <button onClick={onClickGetValue}>決定</button>
         </>
