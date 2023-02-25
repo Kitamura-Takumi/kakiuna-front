@@ -56,6 +56,14 @@ const Review = () => {
            <input type="text" class="textbox"/>
        </div>
    </div>
+   <div class="warp_text02">
+        <div class="messeage">
+                感想
+        </div>
+        <div class="warp">
+                <input type="text" class="textbox"/>
+        </div>
+    </div>
 </div>
         
         </>

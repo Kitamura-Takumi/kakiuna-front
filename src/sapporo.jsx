@@ -1,5 +1,6 @@
 import "./sapporo.css"
 
+
 const Sapporo = () => { 
     const name = "札幌ドーム";
     const adress = "〒062-0045 北海道札幌市豊平区羊ケ丘１"
@@ -60,14 +61,6 @@ const Sapporo = () => {
            <input type="text" class="textbox"/>
        </div>
    </div>
-   <div class="warp_text02">
-        <div class="messeage">
-                感想
-        </div>
-        <div class="warp">
-                <input type="text" class="textbox"/>
-        </div>
-    </div>
 </div>
 </>
    )
