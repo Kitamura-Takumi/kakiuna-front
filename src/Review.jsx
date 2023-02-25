@@ -1,23 +1,19 @@
-import "./sapporo.css"
+import { useState } from "react";
+const Review = () => {
 
-const Sapporo = () => { 
-    const name = "札幌ドーム";
-    const adress = "〒062-0045 北海道札幌市豊平区羊ケ丘１"
-    const team = "コンサドーレ札幌";
-    const img = "/sapporo.jpg";
-    
+    const [text, setText] = useState();
 
-   return (
-      <>
-   <div class="flex-container">
-   <div class="Visual">
-       <h1>{name}</h1>
-       <h1>所在地:{adress}</h1>
-           <h1>ホームチーム：{team}</h1>
-   </div>
-   <img src={img} alt="スタジアム" />
-</div>
-<div class="flex01">
+    const getValue = () => {
+        
+    }
+    return (
+        <>
+    <div>
+        <input value={text} onChange={(event) => setText(event.target.value)}/>
+        <button onClick={getValue}>決定</button>
+    </div>
+
+        <div class="flex01">
    <div class="warp_text">
        <div class="warp_heading">
            総合
@@ -60,17 +56,10 @@ const Sapporo = () => {
            <input type="text" class="textbox"/>
        </div>
    </div>
-   <div class="warp_text02">
-        <div class="messeage">
-                感想
-        </div>
-        <div class="warp">
-                <input type="text" class="textbox"/>
-        </div>
-    </div>
 </div>
-</>
-   )
-};
+        
+        </>
+    )
+    }
 
-export default Sapporo;
+export default Review;

@@ -77,3 +77,21 @@ html{
   justify-content: center;
   flex-wrap: wrap;
  }
+ .warp_text02{
+  flex-basis: 30%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  border: rgb(104, 114, 250) 4px solid;
+  min-width: 100%;
+  min-height: 200px;
+  background-color: rgba(118, 214, 240, 0.933);
+  margin: 10px 5px 0 5px;
+  font-size: 5em;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: left;
+ }
+ .messege {
+  min-height: 20px;
+  flex-wrap: wrap;
+ }
