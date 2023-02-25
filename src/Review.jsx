@@ -1,4 +1,8 @@
 import { useState } from "react";
+import CmpReview from "./components/CmpReview";
+import { Route, Routes, Link } from "react-router-dom";
+import Sapporo from "./Sapporo";
+import axios from "axios";
 const Review = () => {
 
     const [text, setText] = useState("");
@@ -16,22 +20,18 @@ const Review = () => {
     const [addGourmet, setAddGourmet] = useState("");
     const [addExcited, setAddExcited] = useState("");
 
+    const [addComponent, setAddComponent] = useState();
+
+    
+
     const onClickAddScreen = () => {
-        setAddText(text);
-        setAddAll(all);
-        setAddConvenient(convenient);
-        setAddAbleSee(ableSee);
-        setAddGourmet(gourmet);
-        setAddExcited(excited);
+        <Routes>
+        < Route exact path="/sapporo" element={<Sapporo />} />
+        </Routes>
 
-        setText("");
-        setAll("");
-        setConvenient("");
-        setAbleSee("");
-        setGourmet("");
-        setExcited("");
+        const newScreen = [...CmpReview];
 
-        
+        setAddComponent(<newScreen />);
     }
 
     return (
@@ -41,65 +41,70 @@ const Review = () => {
         <input type="text" value={text} onChange={(event) => setText(event.target.value)}/>
     </div>
 
-        <div class="flex01">
-   <div class="warp_text">
-       <div class="warp_heading">
+        <div className="flex01">
+   <div className="warp_text">
+       <div className="warp_heading">
            総合
        </div>
-       <div class="warp">
-           <input type="text" class="textbox"/>
+       <div className="warp">
+           <input value={all} type="text" className="textbox"/>
        </div>
    </div>
-   <div class="warp_text">
-       <div class="warp_heading">
+   <div className="warp_text">
+       <div className="warp_heading">
            立地・利便性
        </div>
-       <div class="warp">
+       <div className="warp">
        <input type="text" value={convenient} onChange={(event) => setConvenient(event.target.value)}/>
        </div>
    </div>
-   <div class="warp_text">
-       <div class="warp_heading">
+   <div className="warp_text">
+       <div className="warp_heading">
            見やすさ
        </div>
-       <div class="warp">
+       <div className="warp">
        <input type="text" value={ableSee} onChange={(event) => setAbleSee(event.target.value)}/>
        </div>
    </div>
 </div>
-<div class="flex02">
-   <div class="warp_text">
-       <div class="warp_heading">
+<div className="flex02">
+   <div className="warp_text">
+       <div className="warp_heading">
            グルメ
        </div>
-       <div class="warp">
+       <div className="warp">
        <input type="text" value={gourmet} onChange={(event) => setGourmet(event.target.value)}/>
        </div>
    </div>
-   <div class="warp_text">
-       <div class="warp_heading">
+   <div className="warp_text">
+       <div className="warp_heading">
            熱狂度
        </div>
-       <div class="warp">
+       <div className="warp">
        <input type="text" value={excited} onChange={(event) => setExcited(event.target.value)}/>
        </div>
    </div>
-   <div class="warp_text02">
-       <div class="messeage">
+   <div className="warp_text02">
+       <div className="messeage">
            感想
        </div>
-       <div class="warp">
-        <input type="text" value={excited} onChange={(event) => setExcited(event.target.value)}/>
+       <div className="warp">
+        <input type="text" value={impression} onChange={(event) => setExcited(event.target.value)}/>
        </div>
    </div>
 </div>
+<Link to="/sapporo">
 <button onClick={onClickAddScreen}>決定</button>
+</Link>
 
-{/* {
-    reviewlist.map
-} */}
-        </>
+    </>
     )
     }
 
 export default Review;
+export const onClickAddScreen = async (title, description) => {
+    await axios.post("", {
+      title,
+      description,
+    });
+  };

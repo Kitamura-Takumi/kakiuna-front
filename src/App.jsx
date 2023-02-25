@@ -9,9 +9,9 @@ const router = createBrowserRouter([
   },
   {
     path: "sapporo",
-    element: <Sapporo/>
-  }
-]);
+    element: <Sapporo/>,
+  },
+])
 
 
 const App = () => {
