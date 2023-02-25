@@ -5,7 +5,6 @@ import Review from "./Review";
 import Login from "./Login";
 import Register from "./Register";
 
-
 import { Route, Routes, Link } from "react-router-dom";
 
 const stadiumValue = [
@@ -16,6 +15,7 @@ const stadiumValue = [
 const Home = () => {
   return (
     <div className="html">
+      
       <Routes>
         <Route exact path="/login" element={<Login/>} />
         <Route exact path="/review" element={<Review />} />
@@ -37,15 +37,19 @@ function HomeElement() {
         <Link to="/review">
           <p>レビューをする</p>
         </Link>
+
         <Link to="/login">
           <p>ログイン</p>
         </Link>
+
         <Link to="/register">
           <p>会員登録</p>
         </Link>
+        
         <Link to="/">
           <p>ログアウト</p>
         </Link>
+
       </header>
 
       <div className="box">

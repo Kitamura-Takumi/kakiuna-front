@@ -24,7 +24,7 @@ const Login = () => {
   return (
     <>
     <Routes>
-        < Route exact path="/Home" element={<Home />} />
+        < Route exact path="/nowlogin" element={<Home />} />
     </Routes>
 
       <div>
@@ -40,7 +40,7 @@ const Login = () => {
           value={password} onChange={(event) => setpassword(event.target.value)}/>
       </div>
 
-      <Link to="/">
+      <Link to="/nowlogin">
       <button>送信</button>
       </Link>
     </>
