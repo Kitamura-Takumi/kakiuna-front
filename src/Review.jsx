@@ -16,7 +16,7 @@ const Review = () => {
     const [addGourmet, setAddGourmet] = useState("");
     const [addExcited, setAddExcited] = useState("");
 
-    const onClickGetValue = () => {
+    const onClickAddScreen = () => {
         setAddText(text);
         setAddAll(all);
         setAddConvenient(convenient);
@@ -91,7 +91,7 @@ const Review = () => {
        </div>
    </div>
 </div>
-<button onClick={onClickGetValue}>決定</button>
+<button onClick={onClickAddScreen}>決定</button>
         </>
     )
     }

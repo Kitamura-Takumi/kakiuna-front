@@ -1,4 +1,7 @@
 import { useState } from "react";
+import Home from "./Home";
+import { Route, Routes, Link } from "react-router-dom";
+
 const Register = () => {
     const [username, setUserName] = useState();
     const [mail, setMail] = useState("");
@@ -16,6 +19,10 @@ const Register = () => {
         setAddPassward2(passward2);
     }
     return (
+        <>
+        <Routes>
+        < Route exact path="/nowlogin" element={<Home />} />
+        </Routes>
 
         <div class="content">
         <h1>入会申し込み</h1>
@@ -36,10 +43,11 @@ const Register = () => {
             <label for="password2">パスワード(確認) <spam class="required">必須</spam></label>
             <input type="password" value={passward2} onChange={(event) => setPassward2(event.target.value)}/>
         </div>
-        <div class="control">
+        <Link to="/nowlogin">
             <button onClick={onClickSubmit} type="submit">登録する</button>
-        </div>
+        </Link>
     </div>
+     </>
     )
 }
 
