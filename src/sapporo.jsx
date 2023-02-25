@@ -1,41 +1,38 @@
 import "./sapporo.css"
 import CmpReview from "./components/CmpReview";
-import { useState } from "react";
-
-const onClickAddScreen = () => {
-    
-    const [name, setName] = useState();
-    const [adress, setAdress] = useState();
-    const [team, setTeam] = useState();
-    const [img, setImg] = useState();
-    const [all, setAll] = useState();
-    const [comfortable,setComfortable] = useState();
-    const [ableSee,setAbleSee] = useState();
-    const [gourmet,setgourmet] = useState();
-    const [excited,setexcited] = useState();
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 
-//     useEffect(() => {
-//       (async () => {
-//         const res = await getBooks();
-//         setBooks(res);
-//       })();
-//     }, []);
-      
-//     ...
-    
-//     return (
-//       ...
-//     );
-//   }
-// }
-}
 const Sapporo = () => {
     const name = "札幌ドーム";
     const adress = "〒062-0045 北海道札幌市豊平区羊ケ丘１"
     const team = "コンサドーレ札幌";
-    const img = "/sapporo.jpg";   
-
+    const img = "/sapporo.jpg";  
+    
+    const [text, setText] = useState();
+    const [all, setAll] = useState();
+    const [convenient, setConvenient] = useState("");
+    const [ableSee, setAbleSee] = useState("");
+    const [gourmet, setGourmet] = useState("");
+    const [excited, setExcited] = useState("");
+    const [impression, setImpression] = useState("");
+    useEffect(()=>{
+        fetchData();
+    })
+    const fetchData = async()=>{
+     await axios.get('http://127.0.0.1:8000/polls/stadium').then(res=>{
+        console.log(res.data)
+        setAll(res.data[2]['avetotalrating'])
+        setAbleSee(res.data[2]['avevisibilityrating'])
+        setGourmet(res.data[2]['avefoodrating'])
+        setExcited(res.data[2]['avepassionrating'])
+        setImpression(res.data[2]['avefoodrating'])
+        setConvenient(res.data[2]['aveaccessrating'])
+     }).catch(err=>{
+         console.log(err)
+     })
+    }
    return (
       <>
    <div className="flex-container">
@@ -52,7 +49,7 @@ const Sapporo = () => {
            総合
        </div>
        <div className="warp">
-           <input id="all" type="text" className="textbox" onChange={(event) => setName(event.target.value)}/>
+           {all}
        </div>
    </div>
    <div className="warp_text">
@@ -60,7 +57,7 @@ const Sapporo = () => {
            立地・利便性
        </div>
        <div className="warp">
-           <input id="comfortable" type="text" className="textbox" onChange={(event) => setComfortable(event.target.value)}/>
+           {convenient}
        </div>
    </div>
    <div className="warp_text">
@@ -68,7 +65,7 @@ const Sapporo = () => {
            見やすさ
        </div>
        <div className="warp">
-           <input id="ableSee" type="text" className="textbox" onChange={(event) => setAbleSee(event.target.value)}/>
+           {ableSee}
        </div>
    </div>
 </div>
@@ -78,7 +75,7 @@ const Sapporo = () => {
            グルメ
        </div>
        <div className="warp">
-           <input id="gourmet" type="text" className="textbox" onChange={(event) => setgourmet(event.target.value)}/>
+           {gourmet}
        </div>
    </div>
    <div className="warp_text">
@@ -86,14 +83,12 @@ const Sapporo = () => {
            熱狂度
        </div>
        <div className="warp">
-           <input id="excited" type="text" className="textbox" onChange={(event) => setexcited(event.target.value)}/>
+           {excited}
        </div>
    </div>
 </div>
 
-    {/* reviewlist.map(() => {
-        < CmpReview />
-    }); */}
+
 </>
    )
 };
