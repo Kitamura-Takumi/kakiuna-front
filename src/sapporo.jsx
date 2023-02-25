@@ -15,19 +15,20 @@ const onClickAddScreen = () => {
     const [excited,setexcited] = useState();
 
 
-    useEffect(() => {
-      (async () => {
-        const res = await getBooks();
-        setBooks(res);
-      })();
-    }, []);
+//     useEffect(() => {
+//       (async () => {
+//         const res = await getBooks();
+//         setBooks(res);
+//       })();
+//     }, []);
       
-    ...
+//     ...
     
-    return (
-      ...
-    );
-  }
+//     return (
+//       ...
+//     );
+//   }
+}
 
 const Sapporo = () => { 
     // const name = "札幌ドーム";

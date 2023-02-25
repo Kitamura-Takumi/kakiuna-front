@@ -11,7 +11,6 @@ const stadiumValue = [
   //{ path: "/aomori", Component: Aomori },
 ];
 
-//const score = ;
 
 const Home = () => {
   return (
@@ -59,7 +58,7 @@ function HomeElement() {
             <p>札幌ドーム</p>
           </Link>
         </h1>
-        <p>{score}</p>
+        <p>☆</p>
       </div>
     </div>
   );
