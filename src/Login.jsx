@@ -26,13 +26,14 @@ const Login = () => {
           type="text"
           value={name} onChange={(event) => setname(event.target.value)}/>
       </div>
-      <div>
+      <digit push
+      v>
         <p>パスワード</p>
         <input
           type="password"
           value={password} onChange={(event) => setpassword(event.target.value)}
         />
-      </div>
+      </digit>
       <button type="submit">送信</button>
     </>
   );
