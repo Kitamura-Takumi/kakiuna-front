@@ -43,6 +43,9 @@ function HomeElement() {
         <Link to="/register">
           <p>会員登録</p>
         </Link>
+        <Link to="/">
+          <p>ログアウト</p>
+        </Link>
       </header>
 
       <div className="box">
