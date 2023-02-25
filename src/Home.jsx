@@ -6,47 +6,44 @@ import Review from "./Review";
 import { Route, Routes, Link } from "react-router-dom";
 
 const stadiumValue = [
-  Sapporo
+  { path: "/sapporo", Component: Sapporo },
+  //{ path: "/aomori", Component: Aomori },
 ];
-
-const Value = stadiumValue[0]
-  
-
 
 const Home = () => {
   return (
-    <div className = "html">
-        <Routes>
-          <Route exact path="/login" element={<Review/>} /> 
-          <Route exact path="/" element={<HomeElement />} />
-          <Route exact path= "/sapporo" element={<Value/>} />
-        </Routes> 
+    <div className="html">
+      <Routes>
+        <Route exact path="/login" element={<Review />} />
+        <Route exact path="/" element={<HomeElement />} />
+        {/* <Route exact path="/sapporo" element={<Value.Component />} /> */}
+        {stadiumValue.map((Stadiums) => (
+          <Route exact path={Stadiums.path} element={<Stadiums.Component />} key={Stadiums.path} />
+        ))}
+      </Routes>
     </div>
   );
-}
+};
 
 function HomeElement() {
   return (
     <div>
-    <header>
+      <header>
         <Link to="/login">
           <p>login</p>
-          </Link>
-    </header>
-
-    <div className="box">
-      <h1>
-        <Link to="/sapporo">
-          <p>札幌ドーム</p>
         </Link>
-      </h1>
-      <p>☆☆☆☆☆</p>
-      </div> 
+      </header>
+
+      <div className="box">
+        <h1>
+          <Link to="/sapporo">
+            <p>札幌ドーム</p>
+          </Link>
+        </h1>
+        <p>☆☆☆☆☆</p>
+      </div>
     </div>
   );
 }
-
-
-
 
 export default Home;
