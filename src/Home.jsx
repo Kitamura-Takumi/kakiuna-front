@@ -7,7 +7,9 @@ import { Route, Routes, Link } from "react-router-dom";
 
 const stadiumValue = [
   Sapporo
-]
+];
+
+const Value = stadiumValue[0]
   
 
 
@@ -17,7 +19,7 @@ const Home = () => {
         <Routes>
           <Route exact path="/login" element={<Review/>} /> 
           <Route exact path="/" element={<HomeElement />} />
-          <Route exact path= "/sapporo" element={<Sapporo />} />
+          <Route exact path= "/sapporo" element={<Value/>} />
         </Routes> 
     </div>
   );
