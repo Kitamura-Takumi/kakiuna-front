@@ -3,6 +3,7 @@ import CmpReview from "./components/CmpReview";
 import { Route, Routes, Link } from "react-router-dom";
 import Sapporo from "./Sapporo";
 import axios from "axios";
+import Home from "./Home";
 const Review = () => {
 
     const [text, setText] = useState("");
@@ -11,29 +12,59 @@ const Review = () => {
     const [ableSee, setAbleSee] = useState("");
     const [gourmet, setGourmet] = useState("");
     const [excited, setExcited] = useState("");
+    const [impression, setImpression] = useState();
+    // レスポンスを管理するState
+    const [posts,setPosts] = useState([]);
 
 
-    const [addtext, setAddText] = useState("");
-    const [addAll, setAddAll] = useState("");
-    const [addConvenient,setAddConvenient] = useState("");
-    const [addAbleSee, setAddAbleSee] = useState("");
-    const [addGourmet, setAddGourmet] = useState("");
-    const [addExcited, setAddExcited] = useState("");
+    // const [addtext, setAddText] = useState("");
+    // const [addAll, setAddAll] = useState("");
+    // const [addConvenient,setAddConvenient] = useState("");
+    // const [addAbleSee, setAddAbleSee] = useState("");
+    // const [addGourmet, setAddGourmet] = useState("");
+    // const [addExcited, setAddExcited] = useState("");
+    // const [addImpression, setAddImpression] = useState("");
 
-    const [addComponent, setAddComponent] = useState();
+    // const [addComponent, setAddComponent] = useState();
 
-    
+//     const onClickAddScreen = async (
+//         text,
+//         all,
+//         convenient,
+//         ableSee,
+//         gourmet,
+//         excited,
+//         impression,) => {
+//     await axios.post("http://127.0.0.1:8000/polls/review", {
+//         text,
+//         all,
+//         convenient,
+//         ableSee,
+//         gourmet,
+//         excited,
+//         impression,
+//   }).then(response=>{
+//       console.log('jjjjjjjjjjjjjjj');
+//       console.log(response.data);
+//   })};
 
-    const onClickAddScreen = () => {
-        <Routes>
-        < Route exact path="/sapporo" element={<Sapporo />} />
-        </Routes>
+    // const onClickAddScreen = () => {
+    //     <Routes>
+    //     < Route exact path={StadiumValue.path} element={StadiumValue.Component} />
+    //     </Routes>
 
-        const newScreen = [...CmpReview];
+    //     const newScreen = [...CmpReview];
 
-        setAddComponent(<newScreen />);
+    //     setAddComponent(<newScreen />);
+    // }
+
+    const onClickAddScreen = () =>{
+        axios.post('http://127.0.0.1:8000/polls/review').then(res =>{
+            console.log(res);
+        }).catch(err=>{
+            console.log(err)
+        })
     }
-
     return (
         <>
     <div>
@@ -47,7 +78,8 @@ const Review = () => {
            総合
        </div>
        <div className="warp">
-           <input value={all} type="text" className="textbox"/>
+           <input value={all} type="text" className="textbox"
+           onChange={(event) => setAll(event.target.value)}/>
        </div>
    </div>
    <div className="warp_text">
@@ -89,22 +121,33 @@ const Review = () => {
            感想
        </div>
        <div className="warp">
-        <input type="text" value={impression} onChange={(event) => setExcited(event.target.value)}/>
+        <input type="text" value={impression} onChange={(event) => setImpression(event.target.value)}/>
        </div>
    </div>
 </div>
 <Link to="/sapporo">
-<button onClick={onClickAddScreen}>決定</button>
+    札幌
 </Link>
-
+<button onClick={onClickAddScreen}>決定</button>
     </>
     )
     }
 
 export default Review;
-export const onClickAddScreen = async (title, description) => {
-    await axios.post("", {
-      title,
-      description,
-    });
-  };
+// export const onClickAddScreen = async (
+//         text,
+//         all,
+//         convenient,
+//         ableSee,
+//         gourmet,
+//         excited,
+//         impression,) => {
+//     await axios.post("http://127.0.0.1:8000/review", {
+//         text,
+//         all,
+//         convenient,
+//         ableSee,
+//         gourmet,
+//         excited,
+//         impression,
+//   })};
