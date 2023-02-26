@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 
-const Kashima = () => {
-    const name = "県立カシマスタジアム";
-    const adress = " 〒314-0007 茨城県鹿嶋市神向寺 後山２６−２"
-    const team = "鹿島アントラーズ";
+const Panasonic = () => {
+    const name = "Panasonic Stadium Suita";
+    const adress = "〒565-0826 大阪府吹田市千里万博公園3-3"
+    const team = "ガンバ大阪";
     const img = "/sapporo.jpg";  
     
     const [text, setText] = useState();
@@ -93,4 +93,4 @@ const Kashima = () => {
    )
 };
 
-export default kashima;
+export default Panasonic;
