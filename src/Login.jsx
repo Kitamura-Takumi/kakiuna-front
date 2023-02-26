@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Login.css"
+import "./Login.css";
 import Home from "./Home";
 import { Route, Routes, Link } from "react-router-dom";
 // import axios from "axios";
@@ -22,63 +22,33 @@ const Login = () => {
     setpassword("");
     setbuton("");
     <Routes>
-        < Route exact path="/home" element={<Home />} />
-    </Routes>
+      <Route exact path="/home" element={<Home />} />
+    </Routes>;
   };
 
-  
   return (
     <>
-    
-    
-
-      <div>
+      <div className="text01">
         <p>ユーザーネーム</p>
-        <input
-          id="username"
-          type="text"
-          value={name} onChange={(event) => setname(event.target.value)}/>
       </div>
-      <div>
+      <input
+        type="text"
+        value={name}
+        onChange={(event) => setname(event.target.value)}
+      />
+
+      <div className="text01">
         <p>パスワード</p>
-        <input
-          id="password"
-          type="password"
-          value={password} onChange={(event) => setpassword(event.target.value)}/>
-    <Routes>
-        <Route exact path="/home" element={<Home />} />
-    </Routes>
-      <div className="login01">
-        <div>
-          <div className="text01">
-           <p>ユーザーネーム</p>
-          </div>
-          <input
-            type="text"
-            value={name} onChange={(event) => setname(event.target.value)}/>
-        </div>
-        <div>
-         <div className="text01">
-           <p>パスワード</p>
-          </div>
-          <input
-            type="password"
-            value={password} onChange={(event) => setpassword(event.target.value)}/>
-        </div>
-        <div className="botton01">
-          <Link to="/">
-           <button>送信</button>
-          </Link>
-        </div>
       </div>
+      <input
+        type="password"
+        value={password}
+        onChange={(event) => setpassword(event.target.value)}
+      />
+      <Link to="/">
+        <button>送信</button>
+      </Link>
     </>
   );
 };
 export default Login;
-
-// export const onClickLoginButton = async (username, passward) => {
-//   await axios.post("", {
-//     username,
-//     passward,
-//   });
-// };
