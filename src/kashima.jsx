@@ -5,9 +5,9 @@ import axios from "axios";
 
 
 const Sapporo = () => {
-    const name = "札幌ドーム";
-    const adress = "〒062-0045 北海道札幌市豊平区羊ケ丘１"
-    const team = "コンサドーレ札幌";
+    const name = "鹿島ドーム";
+    const adress = "〒621-0807 京都府亀岡市 亀岡駅北1丁目8番地2"
+    const team = "鹿島アントラーズ";
     const img = "/sapporo.jpg";  
     
     const [text, setText] = useState();
