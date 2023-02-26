@@ -93,4 +93,4 @@ const Kashima = () => {
    )
 };
 
-export default Kashima;
+export default Sapporo;

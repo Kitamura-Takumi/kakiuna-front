@@ -5,6 +5,12 @@ import Sapporo from "./Sapporo";
 import Review from "./Review";
 import Login from "./Login";
 import Register from "./Register";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
+
 import { Route, Routes, Link } from "react-router-dom";
 import Kashima from "./Kashima";
 
@@ -17,7 +23,7 @@ const stadiumValue = [
 const Home = () => {
   return (
     <div className="html">
-      
+
       <Routes>
         <Route exact path="/login" element={<Login/>} />
         <Route exact path="/review" element={<Review />} />
@@ -48,7 +54,7 @@ function HomeElement() {
         <Link to="/register">
           <p>会員登録</p>
         </Link>
-        
+
         <Link to="/">
           <p>ログアウト</p>
         </Link>
@@ -73,9 +79,49 @@ function HomeElement() {
           <p>☆</p>
         </div>
       </body>
-      
+
     </div>
-      
+
+    <>
+    <div className="nabi">
+        <Navbar bg="light" expand="lg">
+          <Container>
+            <Navbar.Brand href="#home">
+              <Link to="/review" className="link">
+                <p>レビュー</p>
+              </Link>
+              </Navbar.Brand>
+              <Navbar.Brand href="#home">
+              <Link to="/login" className="link">
+                <p>ログイン</p>
+              </Link>
+              </Navbar.Brand>
+              <Navbar.Brand href="#home">
+              <Link to="/register" className="link">
+                <p>会員登録</p>
+              </Link>
+              </Navbar.Brand>
+              <Navbar.Brand href="#home">
+              <Link to="/" className="link">
+                <p>ログアウト</p>
+              </Link>
+              </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+    </div>
+
+      <div className="box">
+        <h1>
+          <Link to="/sapporo">
+            <p>札幌ドーム</p>
+          </Link>
+        </h1>
+        <p>☆</p>
+      </div>
+    </>
   );
 }
 

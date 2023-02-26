@@ -1,0 +1,35 @@
+.content{
+    border: solid 3px black;
+    font-size: 20px;
+    text-align: center;
+}
+
+.content h1{
+    font-size: 25px;
+    position: relative;
+    color: #333;
+    text-shadow: 0 0 2px white;
+    background: #f5a194;
+    z-index: -4;
+    border-radius: 0 10px 10px;
+}
+
+.content h1 :before {
+    content: "";
+    position: absolute;
+    background: #f5a194;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 50%;
+    left: -15px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.required{
+    font-size: 8px;
+    color: tomato;
+    font-variant: small-caps;
+}

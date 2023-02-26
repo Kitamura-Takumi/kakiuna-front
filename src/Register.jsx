@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Home from "./Home";
 import { Route, Routes, Link } from "react-router-dom";
+import "./registerstyle.css"
 // import axios from "axios";
 
 const Register = () => {
@@ -13,18 +14,20 @@ const Register = () => {
     const [addpassward, setAddPassward] = useState("");
     const [addpassward2, setAddPassward2] = useState("");
 
-    const onClickSubmit = () => {
+    const onClickRegisterSubmit = () => {
         setUserName(username);
         setAddMail(mail);
         setAddPassward(passward);
         setAddPassward2(passward2);
+
+        <Routes>
+        < Route exact path="/" element={<Home />} />
+        </Routes>
+
     }
     return (
         <>
-        <Routes>
-        < Route exact path="/nowlogin" element={<Home />} />
-        </Routes>
-
+        
         <div className="content">
         <h1>入会申し込み</h1>
         <p>入会するには次のフォームに必要事項をご記入ください</p>
@@ -54,11 +57,11 @@ const Register = () => {
 
 export default Register;
 
-// export const onClickRegisterSubmit = async (username, mymail, passward, passward2) => {
-//     await axios.post("", {
-//         username,
-//         mymail,
-//         passward,
-//         passward2,
-//     });
-// };
+export const onClickRegisterSubmit = async (username, mymail, passward, passward2) => {
+    await axios.post("", {
+        username,
+        mymail,
+        passward,
+        passward2,
+    });
+};
