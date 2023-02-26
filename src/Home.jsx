@@ -1,10 +1,12 @@
 import { useState } from "react";
 import "./App.css";
 import Sapporo from "./Sapporo";
+
 import Review from "./Review";
 import Login from "./Login";
 import Register from "./Register";
 import { Route, Routes, Link } from "react-router-dom";
+import Kashima from "./Kashima";
 
 const stadiumValue = [
   { path: "/sapporo", Component: Sapporo },
@@ -15,12 +17,13 @@ const stadiumValue = [
 const Home = () => {
   return (
     <div className="html">
-      
+
       <Routes>
         <Route exact path="/login" element={<Login/>} />
         <Route exact path="/review" element={<Review />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/" element={<HomeElement />} />
+        <Route exact path="/kashima" element={<Kashima />} />
         {/* <Route exact path="/sapporo" element={<Value.Component />} /> */}
         {stadiumValue.map((Stadiums) => (
           <Route exact path={Stadiums.path} element={<Stadiums.Component />} key={Stadiums.path} />
@@ -45,46 +48,34 @@ function HomeElement() {
         <Link to="/register">
           <p>会員登録</p>
         </Link>
-        
+
         <Link to="/">
           <p>ログアウト</p>
         </Link>
 
-
       </header>
 
-      <div className="flex">
-      <div className="box1">
-        <h1>
-          <Link to="/sapporo">
-            <p>札幌ドーム</p>
-          </Link>
-        </h1>
-        <p>☆</p>
-      </div>
+      <body>
+        <div className="box">
+          <h1>
+            <Link to="/sapporo">
+              <p>札幌ドーム</p>
+            </Link>
+          </h1>
+          <p>☆</p>
+        </div>
+        <div className="box">
+          <h1>
+            <Link to="/kashima">
+              <p>県立カシマスタジアム</p>
+            </Link>
+          </h1>
+          <p>☆</p>
+        </div>
+      </body>
 
-    <div className="box2">
-        <h1>
-          <Link to="/kashima">
-            <p>鹿島ドーム</p>
-          </Link>
-        </h1>
-      </div>
-
-      <div className="box3">
-        <h1>
-          <Link to="/panasonic">
-            <p>パナソニックドーム</p>
-          </Link>
-        </h1>
-      </div>
-
-      </div>
-
-      
-
-      
     </div>
+
   );
 }
 
