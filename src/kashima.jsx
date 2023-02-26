@@ -93,4 +93,4 @@ const Kashima = () => {
    )
 };
 
-export default kashima;
+export default Kashima;

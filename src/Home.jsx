@@ -10,11 +10,10 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import panasonic from "./panasonic";
-import kashima from "./Kashima";
+import Kashima from "./kashima";
 
 
 import { Route, Routes, Link } from "react-router-dom";
-import Kashima from "./Kashima";
 import Panasonic from "./panasonic";
 
 const stadiumValue = [
@@ -46,47 +45,6 @@ const Home = () => {
 
 function HomeElement() {
   return (
-    // <div>
-    //   <header>
-    //     <Link to="/review">
-    //       <p>レビューをする</p>
-    //     </Link>
-
-    //     <Link to="/login">
-    //       <p>ログイン</p>
-    //     </Link>
-
-    //     <Link to="/register">
-    //       <p>会員登録</p>
-    //     </Link>
-
-    //     <Link to="/">
-    //       <p>ログアウト</p>
-    //     </Link>
-
-    //   </header>
-
-    //   <body>
-    //     <div className="box">
-    //       <h1>
-    //         <Link to="/sapporo">
-    //           <p>札幌ドーム</p>
-    //         </Link>
-    //       </h1>
-    //       <p>☆</p>
-    //     </div>
-    //     <div className="box">
-    //       <h1>
-    //         <Link to="/kashima">
-    //           <p>県立カシマスタジアム</p>
-    //         </Link>
-    //       </h1>
-    //       <p>☆</p>
-    //     </div>
-    //   </body>
-
-    //</div>
-
     <>
     <div className="nabi">
         <Navbar bg="light" expand="lg">
