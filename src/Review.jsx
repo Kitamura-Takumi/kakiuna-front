@@ -15,8 +15,9 @@ const Review = () => {
     const [impression, setImpression] = useState();
     // レスポンスを管理するState
     const [posts, setPosts] = useState([]);
+    const [selectedStudio, setSelectedStudio] = useState('4');
 
-
+console.log(selectedStudio)
 //     const [addtext, setAddText] = useState("");
 //     const [addAll, setAddAll] = useState("");
 //     const [addConvenient,setAddConvenient] = useState("");
@@ -57,6 +58,9 @@ const Review = () => {
 
     //     setAddComponent(<newScreen />);
     // }
+
+    
+
     const testdata =  {
         "totalrating":all,
         "foodrating": gourmet,
@@ -66,7 +70,7 @@ const Review = () => {
         "created_at": new Date,
         "updated_at": "2023-02-26T03:39:38.504834+09:00",
         "user": 2,
-        "stadium": 4
+        "stadium": selectedStudio
     };
     const onClickAddScreen = async () => {
         await axios.post('http://127.0.0.1:8000/polls/review',testdata).then(res => {
@@ -85,7 +89,14 @@ const Review = () => {
         <>
             <div>
                 <p>スタジアム名</p>
-                <input type="text" value={text} onChange={(event) => setText(event.target.value)} />
+                <select
+                value={selectedStudio} // ...force the select's value to match the state variable...
+                onChange={e => setSelectedStudio(e.target.value)} // ... and update the state variable on any change!
+                >
+                <option value="4">札幌ドーム</option>
+                <option value="6">県立カシマスタジアム</option>
+                <option value="5">パナソニックスタジアム</option>
+                </select>
             </div>
 
             <div className="flex01">
@@ -150,20 +161,3 @@ const Review = () => {
 }
 
 export default Review;
-// export const onClickAddScreen = async (
-//         text,
-//         all,
-//         convenient,
-//         ableSee,
-//         gourmet,
-//         excited,
-//         impression,) => {
-//     await axios.post("http://127.0.0.1:8000/review", {
-//         text,
-//         all,
-//         convenient,
-//         ableSee,
-//         gourmet,
-//         excited,
-//         impression,
-//   })};
