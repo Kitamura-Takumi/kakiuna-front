@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Home from "./Home";
 import { Route, Routes, Link } from "react-router-dom";
+import "./registerstyle.css"
 // import axios from "axios";
 
 const Register = () => {
@@ -56,11 +57,11 @@ const Register = () => {
 
 export default Register;
 
-// export const onClickRegisterSubmit = async (username, mymail, passward, passward2) => {
-//     await axios.post("", {
-//         username,
-//         mymail,
-//         passward,
-//         passward2,
-//     });
-// };
+export const onClickRegisterSubmit = async (username, mymail, passward, passward2) => {
+    await axios.post("", {
+        username,
+        mymail,
+        passward,
+        passward2,
+    });
+};

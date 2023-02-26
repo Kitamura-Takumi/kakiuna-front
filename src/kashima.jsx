@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 
-const kashima = () => {
-    const name = "鹿島ドーム";
-    const adress = "〒621-0807 京都府亀岡市 亀岡駅北1丁目8番地2"
+const Kashima = () => {
+    const name = "県立カシマスタジアム";
+    const adress = " 〒314-0007 茨城県鹿嶋市神向寺 後山２６−２"
     const team = "鹿島アントラーズ";
     const img = "/sapporo.jpg";  
     
