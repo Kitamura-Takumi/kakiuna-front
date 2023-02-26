@@ -41,47 +41,6 @@ const Home = () => {
 
 function HomeElement() {
   return (
-    <div>
-      <header>
-        <Link to="/review">
-          <p>レビューをする</p>
-        </Link>
-
-        <Link to="/login">
-          <p>ログイン</p>
-        </Link>
-
-        <Link to="/register">
-          <p>会員登録</p>
-        </Link>
-
-        <Link to="/">
-          <p>ログアウト</p>
-        </Link>
-
-      </header>
-
-      <body>
-        <div className="box">
-          <h1>
-            <Link to="/sapporo">
-              <p>札幌ドーム</p>
-            </Link>
-          </h1>
-          <p>☆</p>
-        </div>
-        <div className="box">
-          <h1>
-            <Link to="/kashima">
-              <p>県立カシマスタジアム</p>
-            </Link>
-          </h1>
-          <p>☆</p>
-        </div>
-      </body>
-
-    </div>
-
     <>
     <div className="nabi">
         <Navbar bg="light" expand="lg">
