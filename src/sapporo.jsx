@@ -23,12 +23,12 @@ const Sapporo = () => {
     const fetchData = async()=>{
      await axios.get('http://127.0.0.1:8000/polls/stadium').then(res=>{
         console.log(res.data)
-        setAll(res.data[2]['avetotalrating'])
-        setAbleSee(res.data[2]['avevisibilityrating'])
-        setGourmet(res.data[2]['avefoodrating'])
-        setExcited(res.data[2]['avepassionrating'])
-        setImpression(res.data[2]['avefoodrating'])
-        setConvenient(res.data[2]['aveaccessrating'])
+        setAll(res.data[1]['avetotalrating'])
+        setAbleSee(res.data[1]['avevisibilityrating'])
+        setGourmet(res.data[1]['avefoodrating'])
+        setExcited(res.data[1]['avepassionrating'])
+        setImpression(res.data[1]['avefoodrating'])
+        setConvenient(res.data[1]['aveaccessrating'])
      }).catch(err=>{
          console.log(err)
      })
