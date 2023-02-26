@@ -1,6 +1,8 @@
 import Home from './Home.jsx';
 import { createBrowserRouter, createRoutesFromElements, RouterProvider } from "react-router-dom";
 import Sapporo from './sapporo.jsx';
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,7 @@ const App = () => {
 };
 
 export default App;
+
 
 
 
