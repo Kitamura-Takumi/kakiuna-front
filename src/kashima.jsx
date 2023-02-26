@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 
-const Sapporo = () => {
-    const name = "札幌ドーム";
-    const adress = "〒062-0045 北海道札幌市豊平区羊ケ丘１"
-    const team = "コンサドーレ札幌";
+const Kashima = () => {
+    const name = "県立カシマスタジアム";
+    const adress = " 〒314-0007 茨城県鹿嶋市神向寺 後山２６−２"
+    const team = "鹿島アントラーズ";
     const img = "/sapporo.jpg";  
     
     const [text, setText] = useState();
@@ -23,12 +23,12 @@ const Sapporo = () => {
     const fetchData = async()=>{
      await axios.get('http://127.0.0.1:8000/polls/stadium').then(res=>{
         console.log(res.data)
-        setAll(res.data[0]['avetotalrating'])
-        setAbleSee(res.data[0]['avevisibilityrating'])
-        setGourmet(res.data[0]['avefoodrating'])
-        setExcited(res.data[0]['avepassionrating'])
-        setImpression(res.data[0]['avefoodrating'])
-        setConvenient(res.data[0]['aveaccessrating'])
+        setAll(res.data[2]['avetotalrating'])
+        setAbleSee(res.data[2]['avevisibilityrating'])
+        setGourmet(res.data[2]['avefoodrating'])
+        setExcited(res.data[2]['avepassionrating'])
+        setImpression(res.data[2]['avefoodrating'])
+        setConvenient(res.data[2]['aveaccessrating'])
      }).catch(err=>{
          console.log(err)
      })
@@ -93,4 +93,4 @@ const Sapporo = () => {
    )
 };
 
-export default Sapporo;
+export default Kashima;

@@ -1,10 +1,12 @@
 import { useState } from "react";
 import "./App.css";
 import Sapporo from "./Sapporo";
+
 import Review from "./Review";
 import Login from "./Login";
 import Register from "./Register";
 import { Route, Routes, Link } from "react-router-dom";
+import Kashima from "./Kashima";
 
 const stadiumValue = [
   { path: "/sapporo", Component: Sapporo },
@@ -21,6 +23,7 @@ const Home = () => {
         <Route exact path="/review" element={<Review />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/" element={<HomeElement />} />
+        <Route exact path="/kashima" element={<Kashima />} />
         {/* <Route exact path="/sapporo" element={<Value.Component />} /> */}
         {stadiumValue.map((Stadiums) => (
           <Route exact path={Stadiums.path} element={<Stadiums.Component />} key={Stadiums.path} />
@@ -52,15 +55,27 @@ function HomeElement() {
 
       </header>
 
-      <div className="box">
-        <h1>
-          <Link to="/sapporo">
-            <p>札幌ドーム</p>
-          </Link>
-        </h1>
-        <p>☆</p>
-      </div>
+      <body>
+        <div className="box">
+          <h1>
+            <Link to="/sapporo">
+              <p>札幌ドーム</p>
+            </Link>
+          </h1>
+          <p>☆</p>
+        </div>
+        <div className="box">
+          <h1>
+            <Link to="/kashima">
+              <p>県立カシマスタジアム</p>
+            </Link>
+          </h1>
+          <p>☆</p>
+        </div>
+      </body>
+      
     </div>
+      
   );
 }
 
