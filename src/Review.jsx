@@ -66,7 +66,7 @@ const Review = () => {
         "created_at": new Date,
         "updated_at": "2023-02-26T03:39:38.504834+09:00",
         "user": 2,
-        "stadium": 6
+        "stadium": 4
     };
     const onClickAddScreen = async () => {
         await axios.post('http://127.0.0.1:8000/polls/review',testdata).then(res => {
@@ -142,8 +142,8 @@ const Review = () => {
                 </div>
             </div>
             <button onClick={onClickAddScreen}>決定</button>
-            <Link to="/sapporo">
-                札幌
+            <Link to="/">
+                一覧に戻る
             </Link>
         </>
     )
